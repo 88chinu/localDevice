@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Ticket</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Book Ticket</h1>
+    <form id="bookingForm">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <select id="train" required>
+            <option value="" disabled selected>Select Train</option>
+            <option value="Express Train">Express Train</option>
+            <option value="Local Train">Local Train</option>
+            <option value="Intercity Train">Intercity Train</option>
+        </select>
+        <input type="date" id="date" required>
+        <input type="number" id="seats" placeholder="Number of Seats" required min="1">
+        <button type="submit">Book Ticket</button>
+    </form>
+    <div id="response" class="response"></div>
+    <button id="downloadBtn" style="display:none;">Download Ticket</button>
+
+    <script src="booking.js"></script>
+</body>
+</html>
