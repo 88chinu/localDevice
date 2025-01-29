@@ -3,8 +3,15 @@ function loadPage(page) {
     const content = document.getElementById('content');
     fetch(page)
         .then(response => response.text())
-        .then(data => (content.innerHTML = data))
-        .catch(error => console.error('Error loading page:', error));
+        .then(data => {
+            content.innerHTML = data;
+            // Call the function to reattach the event listeners after loading content
+            attachNavbarEventListeners();
+        })
+        .catch(error => {
+            console.error('Error loading page:', error);
+            content.innerHTML = '<p>Sorry, the page could not be loaded. Please try again later.</p>';
+        });
 }
 
 // Function to load the home page
@@ -19,22 +26,8 @@ function loadNavbarAndFooter() {
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar').innerHTML = data;
-
-            // Add event listeners to navbar links after loading
-            document.getElementById('homeLink').addEventListener('click', (e) => {
-                e.preventDefault();
-                loadPage('home.html');
-            });
-
-            document.getElementById('bookingLink').addEventListener('click', (e) => {
-                e.preventDefault();
-                loadPage('booking.html');
-            });
-
-            document.getElementById('pastBookingsLink').addEventListener('click', (e) => {
-                e.preventDefault();
-                loadPage('pastBookings.html');
-            });
+            // Attach event listeners for the navbar links
+            attachNavbarEventListeners();
         })
         .catch(error => console.error('Error loading navbar:', error));
 
@@ -45,6 +38,34 @@ function loadNavbarAndFooter() {
             document.getElementById('footer').innerHTML = data;
         })
         .catch(error => console.error('Error loading footer:', error));
+}
+
+// Function to attach event listeners to navbar links
+function attachNavbarEventListeners() {
+    const homeLink = document.getElementById('homeLink');
+    const bookingLink = document.getElementById('bookingLink');
+    const pastBookingsLink = document.getElementById('pastBookingsLink');
+
+    if (homeLink) {
+        homeLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loadPage('home.html');
+        });
+    }
+    
+    if (bookingLink) {
+        bookingLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loadPage('booking.html');
+        });
+    }
+    
+    if (pastBookingsLink) {
+        pastBookingsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            loadPage('pastBookings.html');
+        });
+    }
 }
 
 // Function to initialize the page on load

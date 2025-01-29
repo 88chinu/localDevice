@@ -1,0 +1,43 @@
+<!-- ticket.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <conteiner>
+    <div id="navbar">
+        <nav>
+            <span class="project-name"><a href="index.html">Train Ticket Booking</a></span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
+                <li><a href="pastBooking.html">Past Bookings</a></li>
+                <li><a href="allBookings.html">All Tickets</a></li>
+            </ul>
+        </nav>
+    </div>
+    </conteiner>
+
+    <div id="ticketDetails" class="ticket-details">
+        <h1>Ticket Details</h1>
+        <div id="ticketInfo"></div>
+        <div class="button-container">
+            <button id="downloadPdf">Download Ticket</button>
+            <button id="cancelTicket">Cancel Ticket</button>
+        </div>
+    </div>
+
+    <div id="notification" class="notification"></div>
+
+    <footer>
+        <p>&copy; 2025 Train Ticket Booking. All Rights Reserved.</p>
+    </footer>
+
+    <script src="ticket.js"></script>
+</body>
+</html>

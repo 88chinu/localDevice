@@ -1,16 +1,33 @@
+<!-- booking.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Ticket</title>
+    <title>Book Ticket | Train Ticket Booking</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Book Ticket</h1>
+
+     <!-- Navbar -->
+     <div id="navbar">
+        <nav>
+            <span class="project-name"><a href="index.html">Train Ticket Booking</a></span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
+                <li><a href="pastBooking.html">Past Bookings</a></li>
+                <li><a href="allBookings.html">All Tickets</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Booking Form -->
     <form id="bookingForm">
         <input type="text" id="name" placeholder="Name" required>
         <input type="email" id="email" placeholder="Email" required>
+        <input type="text" id="from" placeholder="From (Location)" required>
+        <input type="text" id="to" placeholder="To (Location)" required>
         <select id="train" required>
             <option value="" disabled selected>Select Train</option>
             <option value="Express Train">Express Train</option>
@@ -19,10 +36,15 @@
         </select>
         <input type="date" id="date" required>
         <input type="number" id="seats" placeholder="Number of Seats" required min="1">
-        <button type="submit">Book Ticket</button>
+        <button type="submit">Submit</button>
     </form>
-    <div id="response" class="response"></div>
-    <button id="downloadBtn" style="display:none;">Download Ticket</button>
+
+       <!-- Footer -->
+       <div id="footer">
+        <footer>
+            <p>&copy; 2025 Train Ticket Booking. All Rights Reserved.</p>
+        </footer>
+    </div>
 
     <script src="booking.js"></script>
 </body>

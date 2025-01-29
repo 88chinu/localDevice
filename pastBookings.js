@@ -1,3 +1,4 @@
+//pastbookings.js
 window.onload = function () {
     const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
     const pastBookingsDiv = document.getElementById('pastBookings');
@@ -21,7 +22,7 @@ function viewTicketDetails(index) {
     const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
     const booking = bookings[index];
     localStorage.setItem('currentTicket', JSON.stringify(booking));
-    window.location.href = 'ticketDetail.html';
+    window.location.href = 'ticket.html';
 }
 
 function cancelBooking(index) {
