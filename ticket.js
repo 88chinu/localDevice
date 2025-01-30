@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
         if (ticketDetails) {
             ticketInfoDiv.innerHTML = `
                 <p><strong>Name:</strong> ${ticketDetails.name}</p>
+                <p><strong>Age:</strong> ${ticketDetails.age}</p>
+                <p><strong>Gender:</strong> ${ticketDetails.gender}</p>
                 <p><strong>Email:</strong> ${ticketDetails.email}</p>
                 <p><strong>From:</strong> ${ticketDetails.from}</p>
                 <p><strong>To:</strong> ${ticketDetails.to}</p>
@@ -45,6 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     Train Ticket
 
                     Name: ${ticketDetails.name}
+                    Age: ${ticketDetails.age}
+                    Gender: ${ticket.gender}
                     Email: ${ticketDetails.email}
                     From: ${ticketDetails.from}
                     To: ${ticketDetails.to}

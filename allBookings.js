@@ -11,6 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <div class="booking-box">
                     <h3>Train Ticket</h3>
                     <p><strong>Name:</strong> ${booking.name}</p>
+                    <p><strong>Gender:</strong>${booking.gender}</p>
                     <p><strong>Train:</strong> ${booking.train}</p>
                     <p><strong>Date:</strong> ${booking.date}</p>
                     <p><strong>Seats:</strong> ${booking.seats}</p>
