@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Bookings | Train Ticket Booking</title>
+    <title>🚆 Train Ticket Booking</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
@@ -61,23 +61,57 @@
         }
 
         .all-bookings {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            margin: 30px auto;
-            color: white;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 30px auto;
+    color: white;
+}
 
-        .booking-box {
-            background: rgba(255, 255, 255, 0.2);
-            padding: 15px;
-            border-radius: 8px;
-            text-align: center;
-        }
+.booking-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.booking-box:hover {
+    transform: scale(1.05);
+}
+
+.booking-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #ffb07b;
+}
+
+.booking-box p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.download-btn {
+    background: #feb47b;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background: #ff7e5f;
+    color: white;
+}
+
 
         #footer {
             background: linear-gradient(90deg, #ff7e5f, #feb47b);

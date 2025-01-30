@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Past Bookings | Train Ticket Booking</title>
+    <title>🚆 Train Ticket Booking</title>
     <link rel="stylesheet" href="styles.css">
     <style>
         * {
@@ -61,23 +61,76 @@
         }
 
         .past-bookings {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            margin: 30px auto;
-            color: white;
-        }
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 30px auto;
+    color: white;
+}
 
-        .past-bookings ul {
-            list-style-type: none;
-            padding: 0;
-        }
+.past-booking-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
 
-        .past-bookings li {
-            padding: 10px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-        }
+.past-booking-box:hover {
+    transform: scale(1.05);
+}
+
+.past-booking-box h3 {
+    font-size: 1.2em;
+    color: #ffb07b;
+    margin-bottom: 10px;
+}
+
+.past-booking-box p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.button-group {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.view-btn, .cancel-btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.view-btn {
+    background: #feb47b;
+    border: none;
+    color: black;
+}
+
+.view-btn:hover {
+    background: #ff7e5f;
+    color: white;
+}
+
+.cancel-btn {
+    background: #ff4b5c;
+    border: none;
+    color: white;
+}
+
+.cancel-btn:hover {
+    background: #ff1e3c;
+}
 
         #footer {
             background: linear-gradient(90deg, #ff7e5f, #feb47b);
