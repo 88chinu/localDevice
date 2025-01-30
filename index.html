@@ -5,6 +5,93 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Train Ticket Booking</title>
     <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('https://media.istockphoto.com/id/178489146/photo/high-speed-train.jpg?s=612x612&w=0&k=20&c=j9WfvXQYG5IROhtp0tHWExvLlhAUaCqQNYOGnrH8TvA=') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        #navbar {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            padding: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .project-name a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        #content {
+            flex: 1;
+            text-align: center;
+            padding: 50px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            margin: 50px auto;
+            width: 80%;
+        }
+
+        .button-container button {
+            margin: 10px;
+            padding: 15px 20px;
+            font-size: 1em;
+            background: linear-gradient(90deg, #007bff, #00c6ff);
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .button-container button:hover {
+            background: linear-gradient(90deg, #0056b3, #0088cc);
+        }
+
+        #footer {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
@@ -23,8 +110,8 @@
 
     <!-- Main Content -->
     <div id="content">
-        <h1 style="color: black;">Welcome to Train Ticket Booking</h1>
-        <p style="color: black;">Select a page to navigate:</p>
+        <h1>Welcome to Train Ticket Booking</h1>
+        <p>Select a page to navigate:</p>
 
         <!-- Buttons for Navigation -->
         <div class="button-container">

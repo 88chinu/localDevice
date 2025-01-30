@@ -9,7 +9,6 @@
 </head>
 <body>
     <!-- Navbar -->
-    <conteiner>
     <div id="navbar">
         <nav>
             <span class="project-name"><a href="index.html">Train Ticket Booking</a></span>
@@ -21,19 +20,24 @@
             </ul>
         </nav>
     </div>
-    </conteiner>
 
-    <div id="ticketDetails" class="ticket-details">
-        <h1>Ticket Details</h1>
-        <div id="ticketInfo"></div>
-        <div class="button-container">
-            <button id="downloadPdf">Download Ticket</button>
-            <button id="cancelTicket">Cancel Ticket</button>
+    <!-- Main Content Area -->
+    <div class="content-container">
+        <!-- Ticket Details Section -->
+        <div id="ticketDetails" class="ticket-details">
+            <h1>Ticket Details</h1>
+            <div id="ticketInfo"></div>
+            <div class="button-container">
+                <button id="downloadPdf">Download Ticket</button>
+                <button id="cancelTicket">Cancel Ticket</button>
+            </div>
         </div>
+
+        <!-- Notification Section -->
+        <div id="notification" class="notification"></div>
     </div>
 
-    <div id="notification" class="notification"></div>
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2025 Train Ticket Booking. All Rights Reserved.</p>
     </footer>
