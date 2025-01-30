@@ -9,14 +9,13 @@ document.addEventListener("DOMContentLoaded", function () {
         bookings.forEach((booking, index) => {
             const ticketHTML = `
                 <div class="booking-box">
-                    <h3>🚆 Train Ticket</h3>
+                    <h3>Train Ticket</h3>
                     <p><strong>Name:</strong> ${booking.name}</p>
                     <p><strong>Train:</strong> ${booking.train}</p>
                     <p><strong>Date:</strong> ${booking.date}</p>
                     <p><strong>Seats:</strong> ${booking.seats}</p>
-                    <button class="download-btn" onclick="downloadTicket(${index})">📥 Download Ticket</button>
-                </div>
-            `;
+                    <button class="download-btn" onclick="downloadTicket(${index})"> Download Ticket </button>
+                </div> `;
             allBookingsDiv.insertAdjacentHTML('beforeend', ticketHTML);
         });
     } else {

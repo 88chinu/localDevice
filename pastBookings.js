@@ -12,14 +12,14 @@ window.onload = function () {
         recentBookings.forEach((booking, index) => {
             pastBookingsDiv.innerHTML += `
                 <div class="past-booking-box">
-                    <h3>🎟 Recent Booking</h3>
+                    <h3>Recent Booking</h3>
                     <p><strong>Name:</strong> ${booking.name}</p>
                     <p><strong>Train:</strong> ${booking.train}</p>
                     <p><strong>Date:</strong> ${booking.date}</p>
                     <p><strong>Seats:</strong> ${booking.seats}</p>
                     <div class="button-group">
-                        <button class="view-btn" onclick="viewTicketDetails(${index})">👁 View Details</button>
-                        <button class="cancel-btn" onclick="cancelBooking(${index})">❌ Cancel Booking</button>
+                        <button class="view-btn" onclick="viewTicketDetails(${index})">View Details</button>
+                        <button class="cancel-btn" onclick="cancelBooking(${index})">Cancel Booking</button>
                     </div>
                 </div>
             `;
