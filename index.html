@@ -20,6 +20,7 @@
             background: url('https://media.istockphoto.com/id/178489146/photo/high-speed-train.jpg?s=612x612&w=0&k=20&c=j9WfvXQYG5IROhtp0tHWExvLlhAUaCqQNYOGnrH8TvA=') no-repeat center center fixed;
             background-size: cover;
             color: #fff;
+            line-height: 1.8; /* Increased line spacing */
         }
 
         #navbar {
@@ -65,9 +66,26 @@
             width: 80%;
         }
 
+        h1 {
+            font-size: 50px;
+            margin-bottom: 20px; /* Added spacing below the heading */
+        }
+
+        p {
+            font-size: 18px;
+            margin-bottom: 30px; /* Added spacing below the paragraph */
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column; /* Stack buttons vertically */
+            align-items: center;
+            gap: 15px; /* Space between buttons */
+        }
+
         .button-container button {
-            margin: 10px;
-            padding: 15px 20px;
+            width: 250px; /* Consistent button width */
+            padding: 15px;
             font-size: 1em;
             background: linear-gradient(90deg, #007bff, #00c6ff);
             color: white;
@@ -110,15 +128,14 @@
 
     <!-- Main Content -->
     <div id="content">
-        <h1 style="font-size: 50px;"> All Aboard! Your Journey Begins Here</h1>
-<p>✨ Book, Manage & Explore Your Train Trips with Ease! Select a page to get started. ✨</p>
-
+        <h1>All Aboard! Your Journey Begins Here</h1>
+        <p>✨ Book, Manage & Explore Your Train Trips with Ease! <br> Select a page to get started. ✨</p>
 
         <!-- Buttons for Navigation -->
         <div class="button-container">
-            <button onclick="window.location.href='booking.html'">Book Ticket</button>
-            <button onclick="window.location.href='pastBooking.html'">View Past Bookings</button>
-            <button onclick="window.location.href='allBookings.html'">View All Tickets</button>
+            <button onclick="window.location.href='booking.html'"> Book Ticket</button>
+            <button onclick="window.location.href='pastBooking.html'"> View Past Bookings</button>
+            <button onclick="window.location.href='allBookings.html'"> View All Tickets</button>
         </div>
     </div>
 

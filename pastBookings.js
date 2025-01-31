@@ -2,25 +2,22 @@ window.onload = function () {
     const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
     const pastBookingsDiv = document.getElementById('pastBookings');
 
-    // Clear previous content
     pastBookingsDiv.innerHTML = '';
 
     if (bookings.length > 0) {
-        // Get the last 3 bookings
         const recentBookings = bookings.slice(-3);
 
-        recentBookings.forEach((booking, index) => {
+        recentBookings.forEach((booking) => {
             pastBookingsDiv.innerHTML += `
                 <div class="past-booking-box">
                     <h3>Recent Booking</h3>
+                    <p><strong>Booking ID:</strong> ${booking.bookingId}</p>
                     <p><strong>Name:</strong> ${booking.name}</p>
                     <p><strong>Train:</strong> ${booking.train}</p>
                     <p><strong>Date:</strong> ${booking.date}</p>
                     <p><strong>Seats:</strong> ${booking.seats}</p>
-                    <div class="button-group">
-                        <button class="view-btn" onclick="viewTicketDetails(${index})">View Details</button>
-                        <button class="cancel-btn" onclick="cancelBooking(${index})">Cancel Booking</button>
-                    </div>
+                    <button class="view-btn" onclick="viewTicketDetails('${booking.bookingId}')">View Details</button>
+                    <button class="cancel-btn" onclick="cancelBooking('${booking.bookingId}')">Cancel</button>
                 </div>
             `;
         });
@@ -29,17 +26,18 @@ window.onload = function () {
     }
 };
 
-function viewTicketDetails(index) {
+function viewTicketDetails(bookingId) {
     const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
-    const booking = bookings[index];
-    localStorage.setItem('currentTicket', JSON.stringify(booking));
+    const booking = bookings.find(b => b.bookingId === bookingId);
+    localStorage.setItem('ticketDetails', JSON.stringify(booking));
     window.location.href = 'ticket.html';
 }
 
-function cancelBooking(index) {
-    const bookings = JSON.parse(localStorage.getItem('bookings')) || [];
-    bookings.splice(index, 1);
+function cancelBooking(bookingId) {
+    let bookings = JSON.parse(localStorage.getItem('bookings')) || [];
+    bookings = bookings.filter(b => b.bookingId !== bookingId);
     localStorage.setItem('bookings', JSON.stringify(bookings));
-    alert("Booking cancelled successfully.");
+
+    alert("Booking canceled successfully.");
     window.location.reload();
 }

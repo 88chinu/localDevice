@@ -12,8 +12,11 @@ document.getElementById("bookingForm").addEventListener("submit", function (even
     const date = document.getElementById("date").value;
     const seats = document.getElementById("seats").value;
 
+    // Generate a unique Booking ID
+    const bookingId = "TICKET-" + Math.floor(Math.random() * 1000000);
+
     // Create the ticket details object
-    const ticketDetails = { name, age, gender, email, from, to, train, date, seats };
+    const ticketDetails = { bookingId, name, age, gender, email, from, to, train, date, seats };
 
     // Get existing bookings from localStorage or create a new empty array if not available
     const bookings = JSON.parse(localStorage.getItem("bookings")) || [];
@@ -21,7 +24,7 @@ document.getElementById("bookingForm").addEventListener("submit", function (even
     // Add the new booking to the bookings array
     bookings.push(ticketDetails);
 
-    // Save both the latest ticket and the updated bookings list
+    // Save the ticket with Booking ID
     localStorage.setItem("ticketDetails", JSON.stringify(ticketDetails));
     localStorage.setItem("bookings", JSON.stringify(bookings));
 
@@ -31,5 +34,5 @@ document.getElementById("bookingForm").addEventListener("submit", function (even
 
 // Clear Form Button Functionality
 document.getElementById("clearButton").addEventListener("click", function () {
-    document.getElementById("bookingForm").reset(); // Reset the form fields
+    document.getElementById("bookingForm").reset();
 });
