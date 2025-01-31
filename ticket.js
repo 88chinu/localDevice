@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
                     Name: ${ticketDetails.name}
                     Age: ${ticketDetails.age}
-                    Gender: ${ticket.gender}
+                    Gender: ${ticketDetails.gender}
                     Email: ${ticketDetails.email}
                     From: ${ticketDetails.from}
                     To: ${ticketDetails.to}
