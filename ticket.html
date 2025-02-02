@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚆 Train Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('https://media.istockphoto.com/id/178489146/photo/high-speed-train.jpg?s=612x612&w=0&k=20&c=j9WfvXQYG5IROhtp0tHWExvLlhAUaCqQNYOGnrH8TvA=') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .ticket-container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .ticket-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .ticket-table th, .ticket-table td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .ticket-table th {
+            color: white;
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            margin: 10px;
+            padding: 10px 15px;
+            font-size: 1em;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .download-btn {
+            background: #007bff;
+            color: white;
+        }
+
+        .cancel-btn {
+            background: #dc3545;
+            color: white;
+        }
+
+        .download-btn:hover {
+            background: #0056b3;
+        }
+
+        .cancel-btn:hover {
+            background: #c82333;
+        }
+
+        .notification {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .notification.success {
+            color: #28a745;
+        }
+
+        .notification.error {
+            color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <nav>
+            <span class="project-name"><a href="index.html">Train Ticket Booking</a></span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
+                <li><a href="pastBooking.html">Past Bookings</a></li>
+                <li><a href="allBookings.html">All Tickets</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Ticket Content -->
+    <div class="ticket-container">
+        <h1>Your Ticket Details</h1>
+        <div id="ticketInfo"></div>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button id="downloadPdf" class="download-btn">Download Ticket</button>
+            <button id="cancelTicket" class="cancel-btn">Cancel Ticket</button>
+        </div>
+
+        <!-- Notification -->
+        <div id="notification" class="notification"></div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Train Ticket Booking. All Rights Reserved.</p>
+    </footer>
+
+    <script src="ticket.js"></script>
+</body>
+</html>

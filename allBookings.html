@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🚆 Train Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background: url('https://media.istockphoto.com/id/178489146/photo/high-speed-train.jpg?s=612x612&w=0&k=20&c=j9WfvXQYG5IROhtp0tHWExvLlhAUaCqQNYOGnrH8TvA=') no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        #navbar {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            padding: 15px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .project-name a {
+            color: white;
+            font-size: 1.5em;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .all-bookings {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    margin: 30px auto;
+    color: white;
+}
+
+.booking-box {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.booking-box:hover {
+    transform: scale(1.05);
+}
+
+.booking-box h3 {
+    margin-bottom: 10px;
+    font-size: 1.3em;
+    color: #ffb07b;
+}
+
+.booking-box p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.download-btn {
+    background: #feb47b;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
+}
+
+.download-btn:hover {
+    background: #ff7e5f;
+    color: white;
+}
+
+
+        #footer {
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: auto;
+            width: 100%;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div id="navbar">
+        <nav>
+            <span class="project-name"><a href="index.html">Train Ticket Booking</a></span>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="booking.html">Book Ticket</a></li>
+                <li><a href="pastBooking.html">Past Bookings</a></li>
+                <li><a href="allBookings.html">All Tickets</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1>All Booked Tickets</h1>
+
+    <div id="allBookings" class="all-bookings">
+        <!-- Example ticket box structure -->
+        <div class="booking-box">Ticket 1</div>
+        <div class="booking-box">Ticket 2</div>
+        <div class="booking-box">Ticket 3</div>
+        <div class="booking-box">Ticket 4</div>
+        <!-- More tickets will be dynamically added here -->
+    </div>
+
+    <!-- Footer -->
+    <div id="footer">
+        <footer>
+            <p>&copy; 2025 Train Ticket Booking. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script src="allBookings.js"></script>
+</body>
+</html>
