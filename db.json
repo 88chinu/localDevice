@@ -1,0 +1,9 @@
+{
+    "name": "John Doe",
+    "age": 30,
+    "gender": "Male",
+    "email": "johndoe@example.com",
+    "train": "Express Train 101",
+    "date": "2025-02-03T08:00:00Z",
+    "seats": 2
+}
