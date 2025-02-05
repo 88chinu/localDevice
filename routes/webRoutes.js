@@ -4,7 +4,7 @@ const webModel = require('../model/webModel');
 const router = express.Router();
 
 // Add new booking route
-router.post('/train', async (req, res) => {
+router.post('/bookings', async (req, res) => { 
   try {
     const { name, age, gender, email, train, date, seats } = req.body;
     const newBooking = new webModel({ name, age, gender, email, train, date, seats });
@@ -14,7 +14,7 @@ router.post('/train', async (req, res) => {
     console.error(err);
     res.status(500).json({ message: "Error creating booking", error: err });
   }
-});
+});                              
 
 // Get all bookings route
 router.get('/bookings', async (req, res) => {
@@ -27,7 +27,7 @@ router.get('/bookings', async (req, res) => {
 });
 
 // Get booking by ID route
-router.get('/booking/:id', async (req, res) => {
+router.get('/bookings/:id', async (req, res) => {
   try {
     const booking = await webModel.findById(req.params.id);
     if (!booking) return res.status(404).json({ message: "Booking not found" });
@@ -38,7 +38,7 @@ router.get('/booking/:id', async (req, res) => {
 });
 
 // Delete booking by ID route
-router.delete('/booking/:id', async (req, res) => {
+router.delete('/bookings/:id', async (req, res) => {
   try {
     const booking = await webModel.findByIdAndDelete(req.params.id);
     if (!booking) return res.status(404).json({ message: "Booking not found" });

@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const allBookingsDiv = document.getElementById('allBookings');
     
     // Fetch the bookings from the server
-    fetch('http://localhost:7000/api/bookings')
+    fetch('https://7000-88chinu-localdevice-opp13zxjsls.ws-us117.gitpod.io/api/bookings')
         .then(response => response.json())
         .then(bookings => {
             allBookingsDiv.innerHTML = ''; // Clear existing content

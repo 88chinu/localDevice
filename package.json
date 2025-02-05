@@ -14,7 +14,7 @@
   "dependencies": {
     "express": "^4.21.2",
     "json-server": "^1.0.0-beta.3",
-    "mongoose": "^8.9.6",
+    "mongoose": "^8.9.7",
     "nodemon": "^3.1.9"
   }
 }

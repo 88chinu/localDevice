@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const bookingId = urlParams.get('bookingId'); // Get bookingId from the URL
 
     // Fetch the ticket details from the backend using the bookingId
-    fetch(`http://localhost:7000/api/bookings/${bookingId}`)
+    fetch(`https://7000-88chinu-localdevice-opp13zxjsls.ws-us117.gitpod.io/api/bookings/${bookingId}`)
         .then(response => response.json())
         .then(ticketDetails => {
             if (ticketDetails) {
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Cancel Ticket
             cancelBtn.addEventListener("click", () => {
-                fetch(`http://localhost:7000/api/bookings/${ticketDetails.bookingId}`, {
+                fetch(`https://7000-88chinu-localdevice-opp13zxjsls.ws-us117.gitpod.io/api/bookings/${ticketDetails.bookingId}`, {
                     method: 'DELETE',
                 })
                 .then(response => response.json())

@@ -19,7 +19,7 @@ document.getElementById("bookingForm").addEventListener("submit", function (even
     const ticketDetails = { bookingId, name, age, gender, email, from, to, train, date, seats };
 
     // Send the booking details to the backend
-    fetch('http://localhost:7000/api/bookings', {
+    fetch('https://7000-88chinu-localdevice-opp13zxjsls.ws-us117.gitpod.io/api/bookings', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
